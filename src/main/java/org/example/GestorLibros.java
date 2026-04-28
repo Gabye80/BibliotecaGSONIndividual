@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GestorLibros {
-
     private static final String ARCHIVO = "libros.json";
     private final Gson gson;
 
@@ -24,7 +23,6 @@ public class GestorLibros {
             Libro[] array = gson.fromJson(reader, Libro[].class);
             if (array == null) return new ArrayList<>();
             return new ArrayList<>(Arrays.asList(array));
-
         } catch (IOException e) {
             System.out.println("Error al leer el fichero: " + e.getMessage());
             return new ArrayList<>();
@@ -56,6 +54,7 @@ public class GestorLibros {
 
         for (int i = 0; i < lista.size(); i++) {
             if (lista.get(i).getId().equals(id)) {
+                // Asegurar que el ID no cambie
                 nuevo.setId(id);
                 lista.set(i, nuevo);
                 encontrado = true;
@@ -64,7 +63,7 @@ public class GestorLibros {
         }
 
         if (encontrado) {
-            guardarLibro(lista);
+            guardarLibro(lista);  // Guardar después de modificar
             System.out.println("Libro modificado correctamente.");
         } else {
             System.out.println("No se encontró ningún libro con id " + id);
@@ -85,13 +84,9 @@ public class GestorLibros {
 
     public Libro buscarPorId(String id) {
         List<Libro> lista = leerLibros();
-
         for (Libro l : lista) {
             if (l.getId().equals(id)) return l;
         }
-
         return null;
     }
-
-
 }

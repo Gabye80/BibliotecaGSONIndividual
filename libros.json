@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": "4",
+    "titulo": "cinco2",
+    "autor": "seis",
+    "anioPub": 7,
+    "genero": "ocho"
+  },
+  {
+    "id": "3",
+    "titulo": "7",
+    "autor": "8",
+    "anioPub": 9,
+    "genero": "0"
+  },
+  {
+    "id": "5",
+    "titulo": "6",
+    "autor": "7",
+    "anioPub": 8,
+    "genero": "9"
+  },
+  {
+    "id": "1",
+    "titulo": "2",
+    "autor": "3",
+    "anioPub": 4,
+    "genero": "5"
+  },
+  {
+    "id": "2",
+    "titulo": "2",
+    "autor": "3",
+    "anioPub": 4,
+    "genero": "5"
+  }
+]
