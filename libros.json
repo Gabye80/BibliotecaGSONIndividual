@@ -1,44 +1,44 @@
 [
   {
-    "id": "4",
-    "titulo": "cinco2",
-    "autor": "seis",
-    "anioPub": 7,
-    "genero": "ocho"
-  },
-  {
-    "id": "3",
-    "titulo": "7",
-    "autor": "8",
-    "anioPub": 9,
-    "genero": "0"
-  },
-  {
-    "id": "5",
-    "titulo": "6",
-    "autor": "7",
-    "anioPub": 8,
-    "genero": "9"
-  },
-  {
     "id": "1",
-    "titulo": "2",
-    "autor": "3",
-    "anioPub": 4,
-    "genero": "5"
+    "titulo": "El Imperio Final",
+    "autor": "Brandon Sanderson",
+    "anioPub": 2006,
+    "genero": "Fantasía épica"
   },
   {
     "id": "2",
-    "titulo": "2",
-    "autor": "3",
-    "anioPub": 4,
-    "genero": "5"
+    "titulo": "El Filo de la Navaja",
+    "autor": "Joe Abercrombie",
+    "anioPub": 2006,
+    "genero": "Fantasía oscura"
   },
   {
-    "id": "66",
-    "titulo": "Hola",
-    "autor": "Esto",
-    "anioPub": 67,
-    "genero": "Funciona"
+    "id": "3",
+    "titulo": "El Camino de los Reyes",
+    "autor": "Brandon Sanderson",
+    "anioPub": 2010,
+    "genero": "Alta fantasía"
+  },
+  {
+    "id": "4",
+    "titulo": "Los Demonios",
+    "autor": "Joe Abercrombie",
+    "anioPub": 2025,
+    "genero": "Fantasía oscura"
+  },
+  {
+    "id": "5",
+    "titulo": "El Pozo de la Ascensión",
+    "autor": "Brandon Sanderson",
+    "anioPub": 2007,
+    "genero": "Fantasía épica"
+  },
+  {
+    "id": "6",
+    "titulo": "Antes de que los cuelguen",
+    "autor": "Joe Abercrombie",
+    "anioPub": 2007,
+    "genero": "Fantasía oscura"
   }
 ]
