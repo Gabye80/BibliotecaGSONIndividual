@@ -9,9 +9,14 @@ import java.awt.*;
 public class DialogAgregar extends JDialog {
 
     public DialogAgregar(JFrame parent, GestorLibros gestor, Runnable refrescar) {
-        super(parent, "Agregar Libro", true);
-        setSize(400, 350);
-        setLayout(new GridLayout(7, 2, 10, 10));
+        super(parent, "Agregar Nuevo Libro", true);
+        setSize(450, 380);
+        setLocationRelativeTo(parent);
+        setLayout(new BorderLayout(10, 10));
+
+        // Panel central con GridLayout para etiquetas y campos (2 columnas)
+        JPanel panelCampos = new JPanel(new GridLayout(5, 2, 15, 12));
+        panelCampos.setBorder(BorderFactory.createEmptyBorder(20, 20, 10, 20));
 
         JTextField txtId = new JTextField();
         JTextField txtTitulo = new JTextField();
@@ -19,23 +24,35 @@ public class DialogAgregar extends JDialog {
         JTextField txtAnio = new JTextField();
         JTextField txtGenero = new JTextField();
 
-        add(new JLabel("ID (único):"));
-        add(txtId);
-        add(new JLabel("Título:"));
-        add(txtTitulo);
-        add(new JLabel("Autor:"));
-        add(txtAutor);
-        add(new JLabel("Año publicación:"));
-        add(txtAnio);
-        add(new JLabel("Género:"));
-        add(txtGenero);
+        // Estilo opcional: ancho preferido
+        txtId.setPreferredSize(new Dimension(200, 28));
+        txtTitulo.setPreferredSize(new Dimension(200, 28));
+        txtAutor.setPreferredSize(new Dimension(200, 28));
+        txtAnio.setPreferredSize(new Dimension(200, 28));
+        txtGenero.setPreferredSize(new Dimension(200, 28));
 
+        panelCampos.add(new JLabel("ID (único):"));
+        panelCampos.add(txtId);
+        panelCampos.add(new JLabel("Título:"));
+        panelCampos.add(txtTitulo);
+        panelCampos.add(new JLabel("Autor:"));
+        panelCampos.add(txtAutor);
+        panelCampos.add(new JLabel("Año publicación:"));
+        panelCampos.add(txtAnio);
+        panelCampos.add(new JLabel("Género:"));
+        panelCampos.add(txtGenero);
+
+        // Panel inferior con botones centrados
+        JPanel panelBotones = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         JButton btnGuardar = new JButton("Guardar");
         JButton btnCancelar = new JButton("Cancelar");
-        JPanel panelBotones = new JPanel();
+        btnGuardar.setPreferredSize(new Dimension(100, 32));
+        btnCancelar.setPreferredSize(new Dimension(100, 32));
         panelBotones.add(btnGuardar);
         panelBotones.add(btnCancelar);
-        add(panelBotones);
+
+        add(panelCampos, BorderLayout.CENTER);
+        add(panelBotones, BorderLayout.SOUTH);
 
         btnGuardar.addActionListener(e -> {
             String id = txtId.getText().trim();

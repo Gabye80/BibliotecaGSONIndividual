@@ -3,6 +3,7 @@ package org.example.interfaz;
 import org.example.GestorLibros;
 import org.example.Libro;
 import org.example.interfaz.dialogs.DialogAgregar;
+import org.example.interfaz.dialogs.DialogBuscar;
 import org.example.interfaz.dialogs.DialogModificar;
 import org.example.interfaz.dialogs.DialogEliminar;
 
@@ -33,10 +34,13 @@ public class MainView extends JFrame {
         JButton btnAgregar = new JButton("Agregar");
         JButton btnModificar = new JButton("Modificar");
         JButton btnEliminar = new JButton("Eliminar");
+        JButton btnBuscar = new JButton("Buscar");
+
 
         panelBotones.add(btnAgregar);
         panelBotones.add(btnModificar);
         panelBotones.add(btnEliminar);
+        panelBotones.add(btnBuscar);
 
         add(panelBotones, BorderLayout.NORTH);
         add(scroll, BorderLayout.CENTER);
@@ -50,6 +54,9 @@ public class MainView extends JFrame {
 
         btnEliminar.addActionListener(e ->
                 new DialogEliminar(this, gestor, this::refrescar));
+
+        btnBuscar.addActionListener(e ->
+                new DialogBuscar(this, gestor));
 
         refrescar();
         setVisible(true);

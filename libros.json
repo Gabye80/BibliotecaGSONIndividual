@@ -33,5 +33,12 @@
     "autor": "3",
     "anioPub": 4,
     "genero": "5"
+  },
+  {
+    "id": "66",
+    "titulo": "Hola",
+    "autor": "Esto",
+    "anioPub": 67,
+    "genero": "Funciona"
   }
 ]
